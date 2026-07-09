@@ -73,4 +73,17 @@ const loginUser = async (req, res, next) => {
   }
 };
 
-module.exports = { registerUser, loginUser };
+// @route  GET /api/auth/me
+const getMe = async (req, res, next) => {
+  try {
+    // req.user was attached by the `protect` middleware
+    res.status(200).json({
+      success: true,
+      data: req.user,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+module.exports = { registerUser, loginUser, getMe };
