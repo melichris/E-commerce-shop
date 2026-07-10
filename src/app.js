@@ -9,6 +9,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/products", require("./routes/productRoutes"));
 
 app.use(notFound);
 app.use(errorHandler);
