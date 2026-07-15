@@ -4,7 +4,7 @@ const Product = require("../models/Product");
 // Public — anyone can browse products
 const getProducts = async (req, res, next) => {
   try {
-    const products = await Product.find({});
+    const products = await Product.find({}).populate("category", "name slug");
     res
       .status(200)
       .json({ success: true, count: products.length, data: products });
@@ -17,7 +17,10 @@ const getProducts = async (req, res, next) => {
 // Public — view single product detail
 const getProductById = async (req, res, next) => {
   try {
-    const product = await Product.findById(req.params.id);
+    const product = await Product.findById(req.params.id).populate(
+      "category",
+      "name slug",
+    );
 
     if (!product) {
       res.statusCode = 404;
