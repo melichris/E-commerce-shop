@@ -1,16 +1,18 @@
 <template>
   <div class="shop-layout">
-    <!-- NavBar and TopBar will go here once built -->
+    <NavBar />
     <main>
       <router-view />
     </main>
-    <!-- Footer will go here once built -->
   </div>
 </template>
 
 <script>
+import NavBar from '../components/common/NavBar.vue';
+
 export default {
   name: 'ShopLayout',
+  components: { NavBar },
 };
 </script>
 
