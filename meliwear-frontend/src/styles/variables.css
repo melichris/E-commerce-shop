@@ -1,0 +1,19 @@
+:root {
+  --color-primary: #2D2D2D;
+  --color-secondary: #E8E4DD;
+  --color-background: #FFFFFF;
+  --color-text: #2D2D2D;
+  --color-text-muted: #8A8A8A;
+  --color-accent: #3E7C59;
+  --color-button: #2D2D2D;
+  --color-button-hover: #3E7C59;
+  --color-border: #E0E0E0;
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+}
