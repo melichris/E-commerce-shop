@@ -1,5 +1,6 @@
 <template>
   <div class="shop-layout">
+    <TopBar />
     <NavBar />
     <main>
       <router-view />
@@ -8,18 +9,11 @@
 </template>
 
 <script>
+import TopBar from '../components/common/TopBar.vue';
 import NavBar from '../components/common/NavBar.vue';
 
 export default {
   name: 'ShopLayout',
-  components: { NavBar },
+  components: { TopBar, NavBar },
 };
 </script>
-
-<style scoped>
-.shop-layout {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-</style>
